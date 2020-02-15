@@ -1,0 +1,2 @@
+# monirivas
+pagos por stripe
