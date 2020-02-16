@@ -1,6 +1,6 @@
 'use strict';
 
-var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+var stripe = Stripe('pk_test_nxtartxLtKfrcv6aASH5sYwY');
 
 function registerElements(elements, exampleName) {
   var formClass = '.' + exampleName;
@@ -124,6 +124,7 @@ function registerElements(elements, exampleName) {
         // If we received a token, show the token ID.
         example.querySelector('.token').innerText = result.token.id;
         example.classList.add('submitted');
+        stripeTokenHandler(result.token);
       } else {
         // Otherwise, un-disable inputs.
         enableInputs();
